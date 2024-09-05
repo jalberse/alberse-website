@@ -1,0 +1,31 @@
+/* Fonts */
+
+@font-face {
+    font-family: 'GeistMonoVF';
+    font-style: normal;
+    font-weight: normal;
+    src:
+      url("../fonts/GeistMonoVF.woff") format("woff"),
+};
+
+@font-face {
+    font-family: 'GeistMonoVF';
+    font-style: normal;
+    font-weight: bold;
+    src:
+      url("../fonts/GeistMonoVF.woff") format("woff"),
+};
+
+@font-face {
+    font-family: 'GeistMonoVF';
+    font-style: italic;
+    font-weight: normal;
+    src: url("../fonts/GeistMonoVF.woff") format("woff"),
+};
+
+@font-face {
+    font-family: 'GeistMonoVF';
+    font-style: italic;
+    font-weight: bold;
+    src: url("../fonts/GeistMonoVF.woff") format("woff"),
+};
