@@ -23,29 +23,21 @@ export default function Home() {
     <div>
       <h1>John Alberse</h1>
       <p>Welcome to my website!</p>
-      <p>Here, you can find my <a href="/#code">code</a>, <a href="/">art</a>, and links to my various <a href="/#socials">outposts</a> on the World Wide Web.</p>
-      <h2 id="AboutMe">
-        <a href="#AboutMe"></a>
-        About Me
-      </h2>
+      <p>Here, you can find my <a href="/#code">code</a>, <a href="/art">art</a>, and links to my various <a href="/#socials">outposts</a> on the World Wide Web.</p>
+      <h2 id="AboutMe"><a href="#AboutMe"></a> About Me</h2>
       {/* TODO: Add brief description with links to various parts of the site. */}
       <p>I am a programmer and artist. My professional experience is chiefly with C++, Rust, and C#, but I can solve problems using just about anything approaching a turing machine.</p>
       <p>Professionally, I&apos;ve written a variety of software for a variety of purposes:</p>
       <ul>
         <li>I am the author and maintainer of <a href="https://github.com/jalberse/shimmer">Shimmer</a>, an open source physically-based spectral rendering system in pure Rust.</li>
         <li>I created an <a href="#oceanwaves">ocean surface simulation library</a> for use in Blizzard&apos;s short films.</li>
-        {/* TODO: Link these down to "Code" where I'll have info about AR/XR/VR, Unity, etc */}
-        <li>I led technical development of interactive art installations and experimental live dance performances for Texas A&M&apos;s <a href="https://pvfa.tamu.edu/research/iac/">Institute for Applied Creativity</a>, with a focus on XR.</li>
+        <li>I led technical development of interactive art installations and experimental <a href="#color-of-connection">live dance performances</a> for Texas A&M&apos;s <a href="https://pvfa.tamu.edu/research/iac/">Institute for Applied Creativity</a>, with a focus on XR.</li>
         <li>I developed GPS navigation algorithms and geographic data manipulation programs for <a href="https://www.garmin.com/en-US/">Garmin</a>&apos;s consumer devices.</li>
       </ul>
       <p>Unprofessionally, I like to make art, play Dungeons and Dragons, read and write genre fiction, 
-        and create fun bits of software.</p>
+        and create fun <a href="#palettepuzzle">bits of software</a>.</p>
       <hr></hr>
-      <h2 id="code">
-        <a href="#code"></a>
-        Code and Technology
-      </h2>
-      {/* TODO: Add the coding projects */}
+      <h2 id="code"><a href="#code"></a> Code and Technology</h2>
       <p>This is a subset of the code I have written either professionally, academically, or in an occasional  fit of unrestrained productivity.</p>
       <ul>
         <li id="oceanwaves">
@@ -62,10 +54,13 @@ export default function Home() {
         <li id="shimmer">
           <p><strong><span className="color-intl-orange">Shimmer</span>: Open Source Spectral Renderering System</strong> (Rust) (<a href="https://github.com/jalberse/shimmer">GitHub</a>) <span id="year">(2023)</span> </p>
           <span id="horizontal-images">
-            <Image style={{marginLeft: "4px", marginRight: "4px" }} src="/images/kroken-10k-spp.webp" alt="Kroken Render" width={320} height={320} />
-            <Image style={{marginLeft: "4px", marginRight: "4px" }} src="/images/shimmer_crown.webp" alt="Crown Render" width={229} height={320} />
+            <Image src="/images/kroken-10k-spp.webp" alt="Kroken Render" width={320} height={320} />
+            <Image src="/images/shimmer_crown.webp" alt="Crown Render" width={229} height={320} />
           </span>
-          <p>Details</p>
+          <div className="color-grey" style={{ display: 'flex', justifyContent: 'center' }}>
+            <p>Renders from Shimmer. (Left) Kroken scene by Angelo Ferretti (Right) Crown scene by Martin Lubich. </p>
+          </div>
+          <p>Shimmer is a physically based, spectral rendering system based on the ray tracing algorithm witten in pure Rust. It is principally based on the architecture described in <a href="https://pbr-book.org/">PBRT 4th edition</a>, but it is not meant to be a 1:1 port of that project to Rust, and so may differ where desired.</p>
         </li>
         <li id="ray-tracing-in-one-weekend">
           <p><strong><span className="color-intl-orange">Ray Tracing in One Weekend, in Rust</span>: Yet Another Ray Tracer (YART)</strong> (Rust) (<a href="https://github.com/jalberse/RayTracingInOneWeekendInRust">GitHub</a>) <span id="year">(2022)</span></p>
@@ -89,11 +84,6 @@ export default function Home() {
            (<a href="https://github.com/jalberse/HeightfieldApproximation">GitHub</a>)
            <span id="year"> (2020)</span>
           </p>
-          <p>Heightfield approximation is a computationally cheap method for simulating fluid surfaces over
-            arbitrary domains in real time. In exchange, it is unable to represent more complex phenomena such as
-            breaking waves and droplets. This makes the model a good fit for simulating large bodies of water.
-            Heightfield approximation is also sometimes called iWaves.</p>
-          
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               <video controls width="300">
                 <source src="/media/iwaves.mp4" type="video/mp4" />
@@ -101,7 +91,7 @@ export default function Home() {
             </div>
           <p>This project is an implementation of the iWaves algorithm I wrote many years ago.
             It works well on the CPU, and has a functional-but-slow CUDA implementation (which was my introduction to programming on the GPU).
-            I wouldn&apos;t use it in production, but it is neat enough to share.</p>
+            I wouldn&apos;t necessarily use this implementation in production, but it is neat enough to share.</p>
         </li>
         <li id="palettepuzzle">
           <p><strong><span className="color-intl-orange">PalettePuzzle.com</span>: Daily Color Mixing Puzzles </strong> (TypeScript, React + Next.js, HTML, CSS, PostgreSQL) 
@@ -114,23 +104,25 @@ export default function Home() {
         </li>
         <li id="color-of-connection">
           <p><strong><span className="color-intl-orange">Color of Connection</span>: Immersive Live Dance Performance Tech </strong> (TouchDesigner, Python, GLSL) <span id="year">(2023)</span></p>
-          <p>Details</p>
+          <p>&quot;The Color of Connection&quot; was a performance done in collaboration with dance faculty at Texas A&M. The project explores choreography in an immersive 360 environment from <a href="https://www.igloovision.com/">Igloo Vision</a>. Pairs of dancers interact with each other and their digital counterparts across tangible and virtual space.</p>
+          <p>I was responsible for all technical aspects of the production. Dancer motion was captured using a pair of Kinects, from which optical flow was calculated and used to drive a fluid simulation written in GLSL based on the <a href="https://developer.nvidia.com/gpugems/gpugems/part-vi-beyond-triangles/chapter-38-fast-fluid-dynamics-simulation-gpu">stable fluids model</a>. This fluid simulation was then displayed via the Igloo system to complement the dance performance.</p>
+          <div style={{ display: 'flex', justifyContent: 'center'}}>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/kew3jqWAJ44?si=2cUYtmZEHCVe7J1_" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+          </div>
+          <div className="color-grey" style={{ display: 'flex', justifyContent: 'center' }}>
+            <p>(This is a 360 interactive video, scroll around!)</p>
+          </div>
+          
         </li>
       </ul>
       <hr></hr>
-      <h2 id="socials">
-        <a href="#socials"></a>
-        Outposts
-      </h2>
+      <h2 id="socials"><a href="#socials"></a> Outposts</h2>
       <ul>
         <li>GitHub: <a href="https://github.com/jalberse">jalberse</a></li>
         <li>Twitter: <a href="https://x.com/JohnAlberseArt">@johnalberseart</a></li>
         <li>Instagram: <a href="https://www.instagram.com/johnalberseart/">@johnalberseart</a></li>
       </ul>
-      <h2 id="contact">
-        <a href="#contact"></a>
-        Contact
-      </h2>
+      <h2 id="contact"><a href="#contact"></a> Contact</h2>
       <ul>
         <li>Email: alberse.john (AT) gmail (DOT) com</li>
         <li>Resume and telephone available by request.</li>
