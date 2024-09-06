@@ -1,0 +1,23 @@
+#year {
+  color: $light-gray
+}
+
+#horizontal-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+Image {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.ascii-art {
+  font-family: monospace;
+  white-space: pre;
+}

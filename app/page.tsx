@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   // TODO Hmm, just borrow Eliza's SASS/CSS and edit it as I want it.
   //      Include MIT license and credit on the website + readme re: markdown styling
@@ -10,32 +12,40 @@ export default function Home() {
   //   Do this - define the routes, then route back to the actual route on here (or if they collide, just
   //   implement the path.) I think we at least need to redirect /code since that will just be on our main page now.
 
-  // TODO Change the favicon.
+  // TODO I want different colors on the titles of the projects.
+  //      Need to break it up with different colors to help differentiate them.
+  //      Can just span style it with color I think.
+  //      Orange for those? Sure.
+  //      and can define a "ProjectTitle" class that does that, rather than by id.
+  // TODO And a brief "Title: Description" for each project to be standard in format.
+  //          and so people can see if they're actually interested in the project.
+  //          Like the PalettePuzzle or Shimmer ones.
 
-  // TODO Change the color scheme up.
+  // TODO ASCII drawing at the bottom of the page? Can be in a component.
+  // http://textfiles.com/art/ could grab + cite one of these lol.
 
   return (
     <div>
       <h1>John Alberse</h1>
       <p>Welcome to my website!</p>
-      <p>Here, you can find my <a href="#code">code</a>, <a href="/">art</a>, and links to my various <a href="#socials">outposts</a> on the world wide web.</p>
+      <p>Here, you can find my <a href="#code">code</a>, <a href="/">art</a>, and links to my various <a href="#socials">outposts</a> on the World Wide Web.</p>
       <h2 id="AboutMe">
         <a href="#AboutMe"></a>
         About Me
       </h2>
       {/* TODO: Add brief description with links to various parts of the site. */}
-      <p>I am a programmer and artist. My experience is chiefly in C++, Rust, and C#, but I can solve problems using just about anything approaching a turing machine.</p>
+      <p>I am a programmer and artist. My professional experience is chiefly with C++, Rust, and C#, but I can solve problems using just about anything approaching a turing machine.</p>
       <p>Professionally, I&apos;ve written a variety of software for a variety of purposes:</p>
       <ul>
         <li>I am the author and maintainer of <a href="https://github.com/jalberse/shimmer">Shimmer</a>, an open source physically-based spectral rendering system in pure Rust.</li>
         <li>I created an <a href="#oceanwaves">ocean surface simulation library</a> for use in Blizzard&apos;s short films.</li>
         {/* TODO: Link these down to "Code" where I'll have info about AR/XR/VR, Unity, etc */}
-        <li>I lead technical development of interactive art installations and live dance performances for Texas A&M&apos;s
-          <a href="https://pvfa.tamu.edu/research/iac/"> Institute for Applied Creativity</a>.</li>
+        <li>I led technical development of interactive art installations and experimental live dance performances for Texas A&M&apos;s <a href="https://pvfa.tamu.edu/research/iac/">Institute for Applied Creativity</a>, with a focus on XR.</li>
         <li>I developed GPS navigation algorithms and geographic data manipulation programs for <a href="https://www.garmin.com/en-US/">Garmin</a>&apos;s consumer devices.</li>
       </ul>
       <p>Unprofessionally, I like to make art, play Dungeons and Dragons, read and write genre fiction, 
         and create fun bits of software.</p>
+      <hr></hr>
       <h2 id="code">
         <a href="#code"></a>
         Code and Technology
@@ -44,39 +54,75 @@ export default function Home() {
       <p>This is a subset of the code I have written either professionally, academically, or in an occasional  fit of unrestrained productivity.</p>
       <ul>
         <li id="oceanwaves">
-          <p><strong>Fourier Synthesis of Ocean Waves | Blizzard Entertainment</strong> (C++, Python, Houdini HDK + VEX, Katana Op API)</p>
+          <p><strong>Fourier Synthesis of Ocean Waves | Blizzard Entertainment</strong> (C++, Python, Houdini HDK + VEX, Katana Op API) <span id="year">(2023)</span></p>
           <p>
             Ocean surface evaluation library based on prior work by e.g. Tessendorf and Horvath 
             with integration into FX team&apos;s workflow across Houdini and Katana. Intended for use in Blizzard cinematics.
           </p>
           <span style={{ display: 'flex', justifyContent: 'center' }}>
-            {/* https://stackoverflow.com/questions/46635316/youtube-embedded-video-auto-loop-without-refresh-screen
-            Consider doing the above to avoid the black flash before looping. */}
-            <iframe 
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/hYRpkBWnuwM?autoplay=1&loop=1&playlist=hYRpkBWnuwM"
-              title="YouTube video player" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin" 
-              allowFullScreen
-              frameBorder={0}
-              >
-            </iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hYRpkBWnuwM?si=To8sr23A9FSSqoZV" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           </span>
           <p>Created for a research and development internship with Blizzard; the above sample render is their property, posted with permission.</p>
         </li>
         <li id="shimmer">
-          <p><strong>Shimmer : Open Source Spectral Renderering System</strong> (Rust) (<a href="https://github.com/jalberse/shimmer">GitHub</a>)</p>
+          <p><strong>Shimmer : Open Source Spectral Renderering System</strong> (Rust) (<a href="https://github.com/jalberse/shimmer">GitHub</a>) <span id="year">(2023)</span> </p>
+          <span id="horizontal-images">
+            <Image style={{marginLeft: "4px", marginRight: "4px" }} src="/images/kroken-10k-spp.webp" alt="Kroken Render" width={320} height={320} />
+            <Image style={{marginLeft: "4px", marginRight: "4px" }} src="/images/shimmer_crown.webp" alt="Crown Render" width={229} height={320} />
+          </span>
+          <p>Details</p>
+        </li>
+        <li id="ray-tracing-in-one-weekend">
+          <p><strong>Ray Tracing in One Weekend, in Rust</strong> (Rust) (<a href="https://github.com/jalberse/RayTracingInOneWeekendInRust">GitHub</a>) <span id="year">(2022)</span></p>
+          <p>Details</p>
+        </li>
+        <li id="feriphys">
+          <p><strong>Feriphys: Physics Simulation for Computer Graphics </strong> (Rust, wgpu) (<a href="https://github.com/jalberse/feriphys">GitHub</a>) <span id="year">(2022)</span></p>
+          <p>Details</p>
+        </li>
+        <li id="heightfield">
+          {/* TODO: The gif */}
+          <p><strong>Fluid Surface Simulation via Heightfield Approximation</strong> (C++)
+           (<a href="https://github.com/jalberse/HeightfieldApproximation">GitHub</a>)
+           <span id="year"> (2020)</span>
+          </p>
+          <p>Heightfield approximation is a computationally cheap method for simulating fluid surfaces over
+            arbitrary domains in real time. In exchange, it is unable to represent more complex phenomena such as
+            breaking waves and droplets. This makes the model a good fit for simulating large bodies of water.
+            Heightfield approximation is also sometimes called iWaves.</p>
+          <div id="horizontal-images">
+            <Image style={{marginLeft: "4px", marginRight: "4px" }}
+              src="/images/gifs/iwaves-1.gif" alt="Heightfield approximation of water surface" width={300} height={300} unoptimized />
+            <Image style={{marginLeft: "4px", marginRight: "4px" }}
+              src="/images/gifs/iwaves-3.gif" alt="Heightfield approximation of water surface" width={300} height={300} unoptimized />
+          </div>
+          <p>This project is an implementation of the iWaves algorithm I wrote many years ago.
+            It works well on the CPU, and has a functional-but-slow CUDA implementation (which was my introduction to programming on the GPU).
+            I wouldn&apos;t use it in production, but it is neat enough to share.</p>
+        </li>
+        <li id="palettepuzzle">
+          <p><strong>PalettePuzzle.com : Daily Color Mixing Puzzles </strong> (TypeScript, React + Next.js, HTML, CSS, PostgreSQL) 
+            (<a href="https://www.palettepuzzle.com/">Website</a>, <a href="https://github.com/jalberse/palette_puzzle">GitHub</a>)
+            <span id="year"> (2024)</span>
+          </p>
+          <p>A puzzle game similar to Wordle where the goal is to mix a target color from a palette in as few steps as possible.
+            A cron job supplies new puzzles each day.
+          </p>
+        </li>
+        <li id="color-of-connection">
+          <p><strong>Color of Connection </strong> (TouchDesigner, Python, GLSL) <span id="year">(2023)</span></p>
           <p>Details</p>
         </li>
       </ul>
+      <hr></hr>
       <h2 id="socials">
         <a href="#socials"></a>
         Outposts
       </h2>
       <ul>
+        <li>GitHub: <a href="https://github.com/jalberse">jalberse</a></li>
         <li>Twitter: <a href="https://x.com/JohnAlberseArt">@johnalberseart</a></li>
+        <li>Instagram: <a href="https://www.instagram.com/johnalberseart/">@johnalberseart</a></li>
       </ul>
       <h2 id="contact">
         <a href="#contact"></a>

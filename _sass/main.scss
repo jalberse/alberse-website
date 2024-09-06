@@ -2,6 +2,7 @@
 @import "fonts.scss";
 @import "markdown.scss";
 @import "navbar.scss";
+@import "bits.scss";
 
 /* Common vars */
 
@@ -73,7 +74,7 @@ div.halftitle {
 
 a {
   color: $link-color;
-  text-decoration: none;
+  text-decoration: underline;
   cursor: pointer;
 
   &:hover {

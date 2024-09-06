@@ -6,7 +6,7 @@ This project uses Next.js with npm. To run the dev server:
 
 This project uses SASS to build its css files. Run the following to re-compile `main.css` when `main.scss` is edited. Don't edit `main.css` directly. 
 
-`sass --watch _sass/main.scss css/main.css`
+`sass --watch _sass/main.scss public/css/main.css`
 
 ### Acknowledgements
 

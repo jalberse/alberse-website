@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
       <a href="#">Art Portfolio</a> |
       <a href="#code">Code</a> |
       <a href="https://github.com/jalberse">GitHub</a> |
-      <a href="#">Addenda</a>
+      <a href="/addenda">Addenda</a>
     </nav>
   );
 };
