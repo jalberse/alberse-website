@@ -1,11 +1,6 @@
 import Image from "next/image";
 
 export default function Home() {
-  // TODO Hmm, just borrow Eliza's SASS/CSS and edit it as I want it.
-  //      Include MIT license and credit on the website + readme re: markdown styling
-  // TODO Page with acknolwedgements and licenses for all the stuff I'm using, chiefly Eliza's stuff
-  //      for most of the css styling.
-
   // TODO Ensure that links from squarespace still work and go to reasonable places.
   //      Especially johnalberse.com/code (which can probably just redirect to the homepage?)
   // https://nextjs.org/docs/app/building-your-application/routing/redirecting#redirects-in-nextconfigjs
@@ -28,7 +23,7 @@ export default function Home() {
     <div>
       <h1>John Alberse</h1>
       <p>Welcome to my website!</p>
-      <p>Here, you can find my <a href="#code">code</a>, <a href="/">art</a>, and links to my various <a href="#socials">outposts</a> on the World Wide Web.</p>
+      <p>Here, you can find my <a href="/#code">code</a>, <a href="/">art</a>, and links to my various <a href="/#socials">outposts</a> on the World Wide Web.</p>
       <h2 id="AboutMe">
         <a href="#AboutMe"></a>
         About Me
@@ -54,7 +49,7 @@ export default function Home() {
       <p>This is a subset of the code I have written either professionally, academically, or in an occasional  fit of unrestrained productivity.</p>
       <ul>
         <li id="oceanwaves">
-          <p><strong>Fourier Synthesis of Ocean Waves | Blizzard Entertainment</strong> (C++, Python, Houdini HDK + VEX, Katana Op API) <span id="year">(2023)</span></p>
+          <p><strong><span className="color-intl-orange">Fourier Synthesis of Ocean Waves</span>: Blizzard Entertainment</strong> (C++, Python, Houdini HDK + VEX, Katana Op API) <span id="year">(2023)</span></p>
           <p>
             Ocean surface evaluation library based on prior work by e.g. Tessendorf and Horvath 
             with integration into FX team&apos;s workflow across Houdini and Katana. Intended for use in Blizzard cinematics.
@@ -65,7 +60,7 @@ export default function Home() {
           <p>Created for a research and development internship with Blizzard; the above sample render is their property, posted with permission.</p>
         </li>
         <li id="shimmer">
-          <p><strong>Shimmer : Open Source Spectral Renderering System</strong> (Rust) (<a href="https://github.com/jalberse/shimmer">GitHub</a>) <span id="year">(2023)</span> </p>
+          <p><strong><span className="color-intl-orange">Shimmer</span>: Open Source Spectral Renderering System</strong> (Rust) (<a href="https://github.com/jalberse/shimmer">GitHub</a>) <span id="year">(2023)</span> </p>
           <span id="horizontal-images">
             <Image style={{marginLeft: "4px", marginRight: "4px" }} src="/images/kroken-10k-spp.webp" alt="Kroken Render" width={320} height={320} />
             <Image style={{marginLeft: "4px", marginRight: "4px" }} src="/images/shimmer_crown.webp" alt="Crown Render" width={229} height={320} />
@@ -73,16 +68,24 @@ export default function Home() {
           <p>Details</p>
         </li>
         <li id="ray-tracing-in-one-weekend">
-          <p><strong>Ray Tracing in One Weekend, in Rust</strong> (Rust) (<a href="https://github.com/jalberse/RayTracingInOneWeekendInRust">GitHub</a>) <span id="year">(2022)</span></p>
-          <p>Details</p>
+          <p><strong><span className="color-intl-orange">Ray Tracing in One Weekend, in Rust</span>: Yet Another Ray Tracer (YART)</strong> (Rust) (<a href="https://github.com/jalberse/RayTracingInOneWeekendInRust">GitHub</a>) <span id="year">(2022)</span></p>
+          <p>A Rust implementation of Peter Shirley&apos;s <a href="https://raytracing.github.io/">books on ray tracing</a>, with some extensions such as parallelization via rayon and tiled rendering.
+            I&apos;ve also used it to experiment with hash-based ray path prediction (<a href="http://www.arxiv.org/abs/1910.01304">HRPP</a>).
+            I&apos;ve since directed my interest in light transport towards <a href="/#shimmer">Shimmer</a>.</p>
         </li>
         <li id="feriphys">
-          <p><strong>Feriphys: Physics Simulation for Computer Graphics </strong> (Rust, wgpu) (<a href="https://github.com/jalberse/feriphys">GitHub</a>) <span id="year">(2022)</span></p>
-          <p>Details</p>
+          <p><strong><span className="color-intl-orange">Feriphys</span>: Physics Simulation for Computer Graphics </strong> (Rust, wgpu) (<a href="https://github.com/jalberse/feriphys">GitHub</a>) <span id="year">(2022)</span></p>
+          <p>Feriphys is a crate for physics simulations for computer graphics applications. Features include deformable meshes, cloth simulation, flocking, CPU-bound particle simulations, smoothed particle hydrodynamics, and rigid body dynamics. It is based on “Foundations of Physically Based Modelling and Animation” by Donald House and John C. Keyser, under the tutelage of the latter.</p>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <video controls width="400">
+                <source src="/media/cloth.mp4" type="video/mp4" />
+              </video>
+            </div>
+          <p>The simulations are rendered in a custom engine built using <a href="https://wgpu.rs/">wgpu</a>.</p>
+          <p>This project is pedagogical, with some known issues that I don&apos;t have plans to fix (if I return to this code, it will be for a rewrite in a new engine). For production applications, prefer an established engine like <a href="https://rapier.rs/">rapier</a>.</p>
         </li>
         <li id="heightfield">
-          {/* TODO: The gif */}
-          <p><strong>Fluid Surface Simulation via Heightfield Approximation</strong> (C++)
+          <p><strong><span className="color-intl-orange">PixelFluidEngine</span>: Fluid Surface Simulation via Heightfield Approximation</strong> (C++)
            (<a href="https://github.com/jalberse/HeightfieldApproximation">GitHub</a>)
            <span id="year"> (2020)</span>
           </p>
@@ -90,18 +93,18 @@ export default function Home() {
             arbitrary domains in real time. In exchange, it is unable to represent more complex phenomena such as
             breaking waves and droplets. This makes the model a good fit for simulating large bodies of water.
             Heightfield approximation is also sometimes called iWaves.</p>
-          <div id="horizontal-images">
-            <Image style={{marginLeft: "4px", marginRight: "4px" }}
-              src="/images/gifs/iwaves-1.gif" alt="Heightfield approximation of water surface" width={300} height={300} unoptimized />
-            <Image style={{marginLeft: "4px", marginRight: "4px" }}
-              src="/images/gifs/iwaves-3.gif" alt="Heightfield approximation of water surface" width={300} height={300} unoptimized />
-          </div>
+          
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <video controls width="300">
+                <source src="/media/iwaves.mp4" type="video/mp4" />
+              </video>
+            </div>
           <p>This project is an implementation of the iWaves algorithm I wrote many years ago.
             It works well on the CPU, and has a functional-but-slow CUDA implementation (which was my introduction to programming on the GPU).
             I wouldn&apos;t use it in production, but it is neat enough to share.</p>
         </li>
         <li id="palettepuzzle">
-          <p><strong>PalettePuzzle.com : Daily Color Mixing Puzzles </strong> (TypeScript, React + Next.js, HTML, CSS, PostgreSQL) 
+          <p><strong><span className="color-intl-orange">PalettePuzzle.com</span>: Daily Color Mixing Puzzles </strong> (TypeScript, React + Next.js, HTML, CSS, PostgreSQL) 
             (<a href="https://www.palettepuzzle.com/">Website</a>, <a href="https://github.com/jalberse/palette_puzzle">GitHub</a>)
             <span id="year"> (2024)</span>
           </p>
@@ -110,7 +113,7 @@ export default function Home() {
           </p>
         </li>
         <li id="color-of-connection">
-          <p><strong>Color of Connection </strong> (TouchDesigner, Python, GLSL) <span id="year">(2023)</span></p>
+          <p><strong><span className="color-intl-orange">Color of Connection</span>: Immersive Live Dance Performance Tech </strong> (TouchDesigner, Python, GLSL) <span id="year">(2023)</span></p>
           <p>Details</p>
         </li>
       </ul>
@@ -128,7 +131,6 @@ export default function Home() {
         <a href="#contact"></a>
         Contact
       </h2>
-      {/* TODO: Add alberse.john (AT) gmail (DOT) com */}
       <ul>
         <li>Email: alberse.john (AT) gmail (DOT) com</li>
         <li>Resume and telephone available by request.</li>
