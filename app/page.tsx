@@ -7,7 +7,7 @@ export default function Home() {
       <p>Welcome to my website!</p>
       <p>Here, you can find my <a href="/#code">code</a>, <a href="/art">art</a>, and links to my various <a href="/#socials">outposts</a> on the World Wide Web.</p>
       <h2 id="AboutMe"><a href="#AboutMe"></a> About Me</h2>
-      <p>I am a programmer and artist. I like computer graphics, physical simulation, </p>
+      <p>I am a programmer and artist.</p>
       <p>Professionally, I&apos;ve written a variety of software for a variety of purposes:</p>
       <ul>
         <li>I am the author and maintainer of <a href="https://github.com/jalberse/shimmer">Shimmer</a>, an open source physically-based spectral rendering system in pure Rust.</li>
