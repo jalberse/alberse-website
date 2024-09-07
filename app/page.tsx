@@ -1,32 +1,13 @@
 import Image from "next/image";
 
 export default function Home() {
-  // TODO Ensure that links from squarespace still work and go to reasonable places.
-  //      Especially johnalberse.com/code (which can probably just redirect to the homepage?)
-  // https://nextjs.org/docs/app/building-your-application/routing/redirecting#redirects-in-nextconfigjs
-  //   Do this - define the routes, then route back to the actual route on here (or if they collide, just
-  //   implement the path.) I think we at least need to redirect /code since that will just be on our main page now.
-
-  // TODO I want different colors on the titles of the projects.
-  //      Need to break it up with different colors to help differentiate them.
-  //      Can just span style it with color I think.
-  //      Orange for those? Sure.
-  //      and can define a "ProjectTitle" class that does that, rather than by id.
-  // TODO And a brief "Title: Description" for each project to be standard in format.
-  //          and so people can see if they're actually interested in the project.
-  //          Like the PalettePuzzle or Shimmer ones.
-
-  // TODO ASCII drawing at the bottom of the page? Can be in a component.
-  // http://textfiles.com/art/ could grab + cite one of these lol.
-
   return (
     <div>
       <h1>John Alberse</h1>
       <p>Welcome to my website!</p>
       <p>Here, you can find my <a href="/#code">code</a>, <a href="/art">art</a>, and links to my various <a href="/#socials">outposts</a> on the World Wide Web.</p>
       <h2 id="AboutMe"><a href="#AboutMe"></a> About Me</h2>
-      {/* TODO: Add brief description with links to various parts of the site. */}
-      <p>I am a programmer and artist. My professional experience is chiefly with C++, Rust, and C#, but I can solve problems using just about anything approaching a turing machine.</p>
+      <p>I am a programmer and artist. I like computer graphics, physical simulation, </p>
       <p>Professionally, I&apos;ve written a variety of software for a variety of purposes:</p>
       <ul>
         <li>I am the author and maintainer of <a href="https://github.com/jalberse/shimmer">Shimmer</a>, an open source physically-based spectral rendering system in pure Rust.</li>
@@ -34,7 +15,8 @@ export default function Home() {
         <li>I led technical development of interactive art installations and experimental <a href="#color-of-connection">live dance performances</a> for Texas A&M&apos;s <a href="https://pvfa.tamu.edu/research/iac/">Institute for Applied Creativity</a>, with a focus on XR.</li>
         <li>I developed GPS navigation algorithms and geographic data manipulation programs for <a href="https://www.garmin.com/en-US/">Garmin</a>&apos;s consumer devices.</li>
       </ul>
-      <p>Unprofessionally, I like to make art, play Dungeons and Dragons, read and write genre fiction, 
+      <p className="color-grey aside">(While my professional experience is chiefly with C++, Rust, and C#, I can solve problems using just about anything approaching a turing machine.)</p>
+      <p>Unprofessionally, I like to make art, play Dungeons and Dragons, read and write, 
         and create fun <a href="#palettepuzzle">bits of software</a>.</p>
       <hr></hr>
       <h2 id="code"><a href="#code"></a> Code and Technology</h2>
@@ -54,8 +36,8 @@ export default function Home() {
         <li id="shimmer">
           <p><strong><span className="color-intl-orange">Shimmer</span>: Open Source Spectral Renderering System</strong> (Rust) (<a href="https://github.com/jalberse/shimmer">GitHub</a>) <span id="year">(2023)</span> </p>
           <span id="horizontal-images">
-            <Image src="/images/kroken-10k-spp.webp" alt="Kroken Render" width={320} height={320} />
-            <Image src="/images/shimmer_crown.webp" alt="Crown Render" width={229} height={320} />
+            <Image src="/images/kroken-10k-spp.webp" alt="Kroken Render" width={420} height={420} />
+            <Image src="/images/shimmer_crown.webp" alt="Crown Render" width={300} height={420} />
           </span>
           <div className="color-grey" style={{ display: 'flex', justifyContent: 'center' }}>
             <p>Renders from Shimmer. (Left) Kroken scene by Angelo Ferretti (Right) Crown scene by Martin Lubich. </p>
@@ -64,6 +46,9 @@ export default function Home() {
         </li>
         <li id="ray-tracing-in-one-weekend">
           <p><strong><span className="color-intl-orange">Ray Tracing in One Weekend, in Rust</span>: Yet Another Ray Tracer (YART)</strong> (Rust) (<a href="https://github.com/jalberse/RayTracingInOneWeekendInRust">GitHub</a>) <span id="year">(2022)</span></p>
+          <span id="horizontal-images">
+            <Image src="/images/YART.webp" alt="YART" width={500} height={500} />
+          </span>
           <p>A Rust implementation of Peter Shirley&apos;s <a href="https://raytracing.github.io/">books on ray tracing</a>, with some extensions such as parallelization via rayon and tiled rendering.
             I&apos;ve also used it to experiment with hash-based ray path prediction (<a href="http://www.arxiv.org/abs/1910.01304">HRPP</a>).
             I&apos;ve since directed my interest in light transport towards <a href="/#shimmer">Shimmer</a>.</p>
@@ -72,7 +57,7 @@ export default function Home() {
           <p><strong><span className="color-intl-orange">Feriphys</span>: Physics Simulation for Computer Graphics </strong> (Rust, wgpu) (<a href="https://github.com/jalberse/feriphys">GitHub</a>) <span id="year">(2022)</span></p>
           <p>Feriphys is a crate for physics simulations for computer graphics applications. Features include deformable meshes, cloth simulation, flocking, CPU-bound particle simulations, smoothed particle hydrodynamics, and rigid body dynamics. It is based on “Foundations of Physically Based Modelling and Animation” by Donald House and John C. Keyser, under the tutelage of the latter.</p>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <video controls width="400">
+              <video controls width="500">
                 <source src="/media/cloth.mp4" type="video/mp4" />
               </video>
             </div>
@@ -85,7 +70,7 @@ export default function Home() {
            <span id="year"> (2020)</span>
           </p>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <video controls width="300">
+              <video controls width="420">
                 <source src="/media/iwaves.mp4" type="video/mp4" />
               </video>
             </div>
@@ -112,7 +97,13 @@ export default function Home() {
           <div className="color-grey" style={{ display: 'flex', justifyContent: 'center' }}>
             <p>(This is a 360 interactive video, scroll around!)</p>
           </div>
-          
+        </li>
+        <li>
+          <p><strong><span className="color-intl-orange">360 Pedagogy</span>: Interactive Narrative in Immersive 360 Environments for Education</strong> (Unity, C#, Igloo Core Engine) <span id="year"> (2023)</span></p>
+          <span id="horizontal-images">
+            <Image src="/images/360-pedagogy.webp" alt="360 Pedagogy" width={600} height={320} />
+          </span>
+          <p>In collaboration with Dr. Hwaryoung Seo and Michael Bruner, created a Unity-based system for building interactive narrative projects for a 360 degree environment. Users can interact with a 360-degree screen using a bespoke point-and-click system using VIVE controllers, and student developers can use our scaffolding to build arbitrary narrative graphs for 360 videos with triggers for arbitrary effects and interactions. Students at Texas A&M used this system in the “Immersive Virtual Environments” course in 2023 to create narrative works around a theme of accessibility. A paper on the project and associated pedagogy was accepted to <a href="https://www.isea-international.org/">ISEA 2024</a>.</p>
         </li>
       </ul>
       <hr></hr>

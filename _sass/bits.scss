@@ -1,3 +1,5 @@
+@import "vars.scss";
+
 #year {
   color: $light-gray
 }
@@ -15,4 +17,8 @@
 .ascii-art {
   font-family: monospace;
   white-space: pre;
+}
+
+.aside {
+  text-align: center;
 }

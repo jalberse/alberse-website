@@ -258,6 +258,11 @@
   color: hsl(0, 0%, 40%);
 }
 
+.md iframe {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .md blockquote {
   position: relative;
   padding-left: 2ch;
@@ -416,6 +421,38 @@
   margin-left: 0;
 }
 
+/*
+    vars
+*/
+/***********************************
+ *  1. colors
+ ***********************************/
+.color-intl-orange {
+  color: #FF4F00;
+}
+
+.color-eng-orange {
+  color: #BA160C;
+}
+
+.color-vga-magenta {
+  color: #AA00AA;
+}
+
+.color-vga-red {
+  color: #ff0000;
+}
+
+.color-grey {
+  color: hsl(0, 0%, 40%);
+}
+
+/***********************************
+ *  2. fonts
+ ***********************************/
+/***********************************
+ *  3. dimensions
+ ***********************************/
 #year {
   color: hsl(0, 0%, 75%);
 }
@@ -433,6 +470,10 @@
 .ascii-art {
   font-family: monospace;
   white-space: pre;
+}
+
+.aside {
+  text-align: center;
 }
 
 /* Common vars */

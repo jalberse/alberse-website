@@ -163,6 +163,11 @@
     }
 }
 
+.md iframe {
+    margin-top: $lh;
+    margin-bottom: $lh;
+}
+
 .md blockquote {
     position: relative;
     padding-left: 2ch;
