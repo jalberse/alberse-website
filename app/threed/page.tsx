@@ -20,7 +20,7 @@ export default function Threed()
         <div id="horizontal-images">
           <Image src="/media/look_dev/turp_BaseColor.webp" alt="Base Color" width={300} height={330} />
           <Image src="/media/look_dev/turp_roughness.webp" alt="Roughness" width={300} height={330} />
-          <Image src="/media/look_dev/turp_metallic.webp" alt="Metallic" width={300} height={330} />
+          <Image src="/media/look_dev/turp_Metallic.webp" alt="Metallic" width={300} height={330} />
           <Image src="/media/look_dev/turp_combined.webp" alt="Normals" width={300} height={330} />
         </div>
         </li>
