@@ -34,6 +34,11 @@ const nextConfig = {
       },
     ];
   },
+  // Since we aren't deploying with Vercel, we need to just not optimize Image components.
+  // I've converted them to webp anyways, so this is fine for now.
+  images: {
+    unoptimized: true,
+  },
 };
 
 module.exports = nextConfig;
