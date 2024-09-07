@@ -16,7 +16,7 @@ export default function Home() {
         <li>I developed GPS navigation algorithms and geographic data manipulation programs for <a href="https://www.garmin.com/en-US/">Garmin</a>&apos;s consumer devices.</li>
       </ul>
       <p className="color-grey aside">(While my professional experience is chiefly with C++, Rust, and C#, I can solve problems using just about anything approaching a turing machine.)</p>
-      <p>Unprofessionally, I like to make art, play Dungeons and Dragons, read and write, 
+      <p>Unprofessionally, I like to make art, watch college football, play Dungeons and Dragons, read and write, 
         and create fun <a href="#palettepuzzle">bits of software</a>.</p>
       <hr></hr>
       <h2 id="code"><a href="#code"></a> Code and Technology</h2>
