@@ -14,6 +14,7 @@ export default function Home() {
         <li>I created an <a href="#oceanwaves">ocean surface simulation library</a> for use in Blizzard&apos;s short films.</li>
         <li>I led technical development of interactive art installations and experimental <a href="#color-of-connection">live dance performances</a> for Texas A&M&apos;s <a href="https://pvfa.tamu.edu/research/iac/">Institute for Applied Creativity</a>, with a focus on XR.</li>
         <li>I developed GPS navigation algorithms and geographic data manipulation programs for <a href="https://www.garmin.com/en-US/">Garmin</a>&apos;s consumer devices.</li>
+        <li>I am currently developing <a href="https://github.com/jalberse/refrover">ReferenceRover</a>, a tool for managing artistic reference materials. The key feature is private, local, GPU-accelerated semantic search of image data via CLIP/ORT/ONNX/HNSW.</li>
       </ul>
       <p className="color-grey aside">(While my professional experience is chiefly with C++, Rust, and C#, I can solve problems using just about anything approaching a turing machine.)</p>
       <p>Unprofessionally, I like to make art, watch college football, play Dungeons and Dragons, read and write, 
