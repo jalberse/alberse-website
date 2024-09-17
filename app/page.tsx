@@ -14,7 +14,6 @@ export default function Home() {
         <li>I created an <a href="#oceanwaves">ocean surface simulation library</a> for use in Blizzard&apos;s short films.</li>
         <li>I led technical development of interactive art installations and experimental <a href="#color-of-connection">live dance performances</a> for Texas A&M&apos;s <a href="https://pvfa.tamu.edu/research/iac/">Institute for Applied Creativity</a>, with a focus on XR.</li>
         <li>I developed GPS navigation algorithms and geographic data manipulation programs for <a href="https://www.garmin.com/en-US/">Garmin</a>&apos;s consumer devices.</li>
-        <li>I am currently developing <a href="https://github.com/jalberse/refrover">ReferenceRover</a>, a tool for managing artistic reference materials. The key feature is private, local, GPU-accelerated semantic search of image data via CLIP/ORT/ONNX/HNSW.</li>
       </ul>
       <p className="color-grey aside">(While my professional experience is chiefly with C++, Rust, and C#, I can solve problems using just about anything approaching a turing machine.)</p>
       <p>Unprofessionally, I like to make art, watch college football, play Dungeons and Dragons, read and write, 
@@ -44,6 +43,14 @@ export default function Home() {
             <p>Renders from Shimmer. (Left) Kroken scene by Angelo Ferretti (Right) Crown scene by Martin Lubich. </p>
           </div>
           <p>Shimmer is a physically based, spectral rendering system based on the ray tracing algorithm witten in pure Rust. It is principally based on the architecture described in <a href="https://pbr-book.org/">PBRT 4th edition</a>, but it is not meant to be a 1:1 port of that project to Rust, and so may differ where desired.</p>
+        </li>
+        <li id="reference-rover">
+          <p><strong><span className="color-intl-orange">Reference Rover</span> (Under Development) </strong> (Next.js, Rust, Tauri, Python, Tailwind) <span id="year">(2024)</span></p>
+          <p>I am currently developing <a href="https://github.com/jalberse/refrover">ReferenceRover</a>, a tool for managing artistic reference materials.
+          It is a desktop application built using Rust and Tauri with a Next.js frontend.
+          </p>
+          <p>The key feature is private, local, GPU-accelerated semantic search of image data. Semantic image and text encodings are generated CLIP model running on user machines via the ONNX runtime.
+          The resulting vectors are indexed and searched via the hierarchical navigable small world (HNSW) algorithm.</p>
         </li>
         <li id="ray-tracing-in-one-weekend">
           <p><strong><span className="color-intl-orange">Ray Tracing in One Weekend, in Rust</span>: Yet Another Ray Tracer (YART)</strong> (Rust) (<a href="https://github.com/jalberse/RayTracingInOneWeekendInRust">GitHub</a>) <span id="year">(2022)</span></p>
