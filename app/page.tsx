@@ -45,8 +45,8 @@ export default function Home() {
           <p>Shimmer is a physically based, spectral rendering system based on the ray tracing algorithm witten in pure Rust. It is principally based on the architecture described in <a href="https://pbr-book.org/">PBRT 4th edition</a>, but it is not meant to be a 1:1 port of that project to Rust, and so may differ where desired.</p>
         </li>
         <li id="reference-rover">
-          <p><strong><span className="color-intl-orange">Reference Rover</span> (Under Development) </strong> (Next.js, Rust, Tauri, Python, Tailwind) <span id="year">(2024)</span></p>
-          <p>I am currently developing <a href="https://github.com/jalberse/refrover">ReferenceRover</a>, a tool for managing artistic reference materials.
+          <p><strong><span className="color-intl-orange">Reference Rover</span> (Under Development) </strong> (Next.js, Rust, Tauri, Python, Tailwind) (<a href="https://github.com/jalberse/refrover">GitHub</a>) <span id="year">(2024)</span></p>
+          <p>I am currently developing <a href="https://github.com/jalberse/refrover">ReferenceRover</a>, a tool for locally organizing and searching for artistic reference materials.
           It is a desktop application built using Rust and Tauri with a Next.js frontend.
           </p>
           <p>The key feature is private, local, GPU-accelerated semantic search of image data. Semantic image and text encodings are generated CLIP model running on user machines via the ONNX runtime.
