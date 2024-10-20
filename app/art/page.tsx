@@ -34,6 +34,7 @@ export default function Art()
       <GalleryImage src="/images/art/charon.webp" alt="Charon" />
       <h2 id="painting"> <a href="#painting"></a> Painting</h2>
       <GalleryImage src="/images/art/BlueSkyRuins.webp" alt="Blue Sky Ruins" />
+      <GalleryImage src="/images/art/hallway.webp" alt="Hallway, after Mr. P Explores photography" />
       <GalleryImage src="/images/art/meds-map-study-08.webp" alt="Study" />
       <GalleryImage src="/images/art/jester.webp" alt="Jester" />
       <GalleryImage src="/images/art/black-company.webp" alt="Black Company" />
