@@ -7,7 +7,7 @@ export default function Home() {
       <p>Welcome to my website!</p>
       <p>Here, you can find my <a href="/#code">code</a>, <a href="/art">art</a>, and links to my various <a href="/#socials">outposts</a> on the World Wide Web.</p>
       <h2 id="AboutMe"><a href="#AboutMe"></a> About Me</h2>
-      <p>I am a programmer and artist.</p>
+      <p>I am a programmer and artist. I am chiefly interested in computer graphics.</p>
       <p>Professionally, I&apos;ve written a variety of software for a variety of purposes:</p>
       <ul>
         <li>I currently write 3D web code for Autodesk as a full stack developer</li>
