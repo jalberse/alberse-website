@@ -10,12 +10,13 @@ export default function Home() {
       <p>I am a programmer and artist.</p>
       <p>Professionally, I&apos;ve written a variety of software for a variety of purposes:</p>
       <ul>
+        <li>I currently write 3D web code for Autodesk as a full stack developer</li>
         <li>I am the author and maintainer of <a href="https://github.com/jalberse/shimmer">Shimmer</a>, an open source physically-based spectral rendering system in pure Rust.</li>
         <li>I created an <a href="#oceanwaves">ocean surface simulation library</a> for use in Blizzard&apos;s short films.</li>
         <li>I led technical development of interactive art installations and experimental <a href="#color-of-connection">live dance performances</a> for Texas A&M&apos;s <a href="https://pvfa.tamu.edu/research/iac/">Institute for Applied Creativity</a>, with a focus on XR.</li>
         <li>I developed GPS navigation algorithms and geographic data manipulation programs for <a href="https://www.garmin.com/en-US/">Garmin</a>&apos;s consumer devices.</li>
       </ul>
-      <p className="color-grey aside">(While my professional experience is chiefly with C++, Rust, and C#, I can solve problems using just about anything approaching a turing machine.)</p>
+      <p className="color-grey aside">(That is mostly C++, Rust, C#, and TypeScript)</p>
       <p>Unprofessionally, I like to make art, watch college football, play Dungeons and Dragons, read and write, 
         and create fun <a href="#palettepuzzle">bits of software</a>.</p>
       <hr></hr>
@@ -117,6 +118,7 @@ export default function Home() {
       <hr></hr>
       <h2 id="socials"><a href="#socials"></a> Outposts</h2>
       <ul>
+        <li>LinkedIn: <a href="www.linkedin.com/in/john-alberse">John Alberse</a></li>
         <li>GitHub: <a href="https://github.com/jalberse">jalberse</a></li>
         <li>Twitter: <a href="https://x.com/JohnAlberseArt">@johnalberseart</a></li>
         <li>Instagram: <a href="https://www.instagram.com/johnalberseart/">@johnalberseart</a></li>
