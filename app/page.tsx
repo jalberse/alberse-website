@@ -118,7 +118,7 @@ export default function Home() {
       <hr></hr>
       <h2 id="socials"><a href="#socials"></a> Outposts</h2>
       <ul>
-        <li>LinkedIn: <a href="www.linkedin.com/in/john-alberse">John Alberse</a></li>
+        <li>LinkedIn: <a href="https://linkedin.com/in/john-alberse">John Alberse</a></li>
         <li>GitHub: <a href="https://github.com/jalberse">jalberse</a></li>
         <li>Twitter: <a href="https://x.com/JohnAlberseArt">@johnalberseart</a></li>
         <li>Instagram: <a href="https://www.instagram.com/johnalberseart/">@johnalberseart</a></li>
