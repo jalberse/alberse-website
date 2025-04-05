@@ -12,7 +12,7 @@ export default function Art()
         <iframe width="100%" height="360" src="https://www.youtube.com/embed/IMeVnKLjI54?si=khgUfNdEKjBv1Ipm" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
       </div>
       <div className="color-grey" style={{ display: 'flex', justifyContent: 'center' }}>
-        <p>&quot;The Line&quot; is a short film I made in collaboration with choreographer and dancer Hannah LecComte, and musician Sydney Legee. (2017)</p>
+        <p>&quot;The Line&quot; is a short film I made in collaboration with choreographer and dancer Hannah LeComte, and musician Sydney Legee. (2017)</p>
       </div>
       <h2 id="illustration"> <a href="#illustration"></a> Illustration</h2>
       <GalleryImage src="/images/art/cafe.webp" alt="Cafe" />
