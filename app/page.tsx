@@ -85,7 +85,7 @@ export default function Home() {
             </div>
           <p>This project is an implementation of the iWaves algorithm I wrote many years ago.
             It works well on the CPU, and has a functional-but-slow CUDA implementation (which was my introduction to programming on the GPU).
-            I wouldn&apos;t necessarily use this implementation in production, but it is neat enough to share.</p>
+            This code isn&apos;t good, but it is neat.</p>
         </li>
         <li id="palettepuzzle">
           <p><strong><span className="color-intl-orange">PalettePuzzle.com</span>: Daily Color Mixing Puzzles </strong> (TypeScript, React + Next.js, HTML, CSS, PostgreSQL) 
