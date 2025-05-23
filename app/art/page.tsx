@@ -21,7 +21,6 @@ export default function Art()
       <GalleryImage src="/images/art/attic.webp" alt="Attic" />
       <GalleryImage src="/images/art/portside.webp" alt="Portside" />
       <GalleryImage src="/images/art/hair-sword.webp" alt="Hair Sword" />
-      <GalleryImage src="/images/art/chainsaw_man.webp" alt="Chainsaw Man" />
       <GalleryImage src="/images/art/girl-with-sword.webp" alt="Girl with a Sword" />
       <GalleryImage src="/images/art/headspace.webp" alt="Headspace" />
       <GalleryImage src="/images/art/nge.webp" alt="NGE" />
@@ -29,7 +28,6 @@ export default function Art()
       <GalleryImage src="/images/art/pizzeria.webp" alt="Pizzeria" />
       <GalleryImage src="/images/art/your_heart.webp" alt="Your Heart" />
       <GalleryImage src="/images/art/spiderverse_5x7.webp" alt="Spiderverse" />
-      <GalleryImage src="/images/art/ninrir.webp" alt="Ninrir" />
       <GalleryImage src="/images/art/lnr.webp" alt="LNR" />
       <GalleryImage src="/images/art/charon.webp" alt="Charon" />
       <h2 id="painting"> <a href="#painting"></a> Painting</h2>
